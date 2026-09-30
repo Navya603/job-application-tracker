@@ -1,21 +1,18 @@
-class JobApplication:
+"""Data models used by the tracker."""
 
-    def __init__(
-        self,
-        company,
-        role,
-        location,
-        application_date,
-        status,
-        interview_date=None,
-        salary=None,
-        notes=None
-    ):
-        self.company = company
-        self.role = role
-        self.location = location
-        self.application_date = application_date
-        self.status = status
-        self.interview_date = interview_date
-        self.salary = salary
-        self.notes = notes
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+
+@dataclass(slots=True)
+class JobApplication:
+    company: str
+    role: str
+    location: str
+    application_date: str
+    status: str
+    interview_date: str | None = None
+    salary: float | None = None
+    notes: str | None = None
+    id: int | None = None
