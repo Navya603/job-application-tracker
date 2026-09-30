@@ -1,9 +1,5 @@
-from database import create_table
-
-
 def main():
 
-    create_table()
 
     while True:
 
